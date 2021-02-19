@@ -3,10 +3,15 @@
 
 import sys
 import requests
+import logging
 
 
 def main():
-    adduser(t, username)
+    try:
+        adduser(t, username)
+    
+    except Exception as e:
+        logging.error(e)
 
 
 def adduser(t, username):
@@ -18,7 +23,12 @@ def adduser(t, username):
 
     url = f"https://api.github.com/repos/CloudSkills/posts/collaborators/{username}"
 
-    print(requests.put(url, headers=headers))
+    try:
+        print(requests.put(url, headers=headers))
+        print('GitHub User Added ')
+    
+    except Exception as e:
+        logging.error(e)
 
 
 t = sys.argv[1]
