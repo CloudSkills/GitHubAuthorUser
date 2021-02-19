@@ -1,0 +1,2 @@
+1. Add a GitHub username to the CloudSkills.io organization by passing in the username as an argument
+2. Add the GitHub user to the CloudSkills.io `Posts` repository with write permission by passing in the username as an argument
